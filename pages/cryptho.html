@@ -36,8 +36,103 @@
         </div>
       </nav>
 
-      <div id="presentacion">
-        
+      <div id="presentacion" class="container">
+        <div class="container">
+          <h2 class="text-center">Introducción</h2>
+          <p class ="text-left">
+            La palabra Criptografía proviene del griego "kryptos" que significa oculto, y "graphia", que significa escritura, y su definición según el dicccionario es "Arte de escribir con clave secreta o de un modo enigmático". La Criptografía es una técnica, o más bien un conjunto de técnicas, que originalmente tratan sobre la protección o el ocultamiento de la información frente a observadores no autorizados. Entre las disciplinas que engloba cabe destacar la Teoría de la Información, la Complejidad Algorítmica y la Teoría de números o Matemática Discreta, que como ya sabemos estudia las propiedades de los números enteros.
+
+            A través de la criptografía la información puede ser protegida contra el acceso no autorizado, su interceptación, su modificación y la inserción de información extra. También puede ser usada para prevenir el acceso y uso no autorizado de los recursos de una red o sistema informático y para prevenir a los usuarios la denegación de los servicios a los que sí están permitidos. Modernamente, la criptografía es la metodología para proveer la seguridad de las redes telemáticas, incluyendo la identificación de entidades y autenticación, el control de acceso a los recursos, la confidencialidad de los mensajes transmitidos, la integridad de los mensajes y su no repudio. 
+            <br><small class="text-muted">Fuente: http://www.dma.fi.upm.es/recursos/aplicaciones/matematica_discreta/web/aritmetica_modular/criptografia.html</small>
+          </p>
+        </div>
+        <div class="container">
+          <h2 class="text-center">Cifrado de Vigenère <br>
+            <img class="rounded" src="http://www.criptored.upm.es/crypt4you/temas/criptografiaclasica/imagenes/Vigenere.jpg" alt="">
+
+          </h2>
+          <p class ="text-left">
+            Blaise de Vigenère fue un criptógrafo, químico y diplomático francés que nace en 1523 y fallece en 1596. En 1586 en el libro Traité des chiffres où secrètes manières d'escrire describe de forma detallada y estructurada la cifra polialfabética, basándose en trabajos previos de otros criptógrafos famosos como Alberti, Trithemius, Bellaso y della Porta. La cifra de Vigenère se mantiene por casi 300 años invulnerable,
+             siendo por tanto bautizada como "le chiffre indéchiffrable"; es el sistema de cifra polialfabética más conocido y por ello nos centraremos exclusivamente en él. 
+             La cifra de Vigenère es muy sencilla, bien sea a través de su tabla o bien usando matemáticas discretas.
+            <br>
+La tabla de Vigenère consiste en una matriz cuadrada de nxn elementos, siendo n el número de letras del alfabeto, que en el caso del español en mayúsculas será 27. En la primera fila se escribe el alfabeto desde la A hasta la Z, lo que sería el alfabeto del texto en claro, en la segunda fila el mismo alfabeto pero desplazado un espacio a la izquierda, en la tercera dos veces, y así sucesivamente hasta la última fila en que el desplazamiento será igual a n-1. 
+        <br><div class="text-center"><img class="rounded" src="http://www.criptored.upm.es/crypt4you/temas/criptografiaclasica/imagenes/tablaVigenere.png" alt=""></div>            
+      <br>
+      </p>
+      <br>
+        <h5 class="text-center">Cifrado con el método de Vigènere</h5>
+        <p class="text-left">
+          Así, si el mensaje es HERMOSO y la clave CIELO, en la columna de la letra H se busca la intersección con la fila de la letra C, dando como resultado el criptograma J, como se muestra en la figura 4. A continuación repetimos el mismo procedimiento para la letra E del texto en claro y la letra I de la clave, y así sucesivamente. Cuando la clave se termina, porque por lo general será menor que el mensaje, ésta se repite de forma cíclico, es decir CIELOCIELOCIELO. Por lo tanto como la clave CIELO tiene 5 letras, la sexta letra S del mensaje HERMOSO se volverá a cifrar con la primera letra C de la clave CIELO. 
+        </p>
+        <br>
+        <div class="text-center">
+          <img class="rounded" src="http://www.criptored.upm.es/crypt4you/temas/criptografiaclasica/imagenes/CifraHERMOSO-CIELO.jpg"
+          alt="">
+        </div>
+        <br>
+        Realizando esta operación en todo el mensaje, el texto en claro HERMOSO se cifrará con Vigenère y la clave CIELO como JMVWDUW.
+        <br>
+        <div class="text-center">
+          <img class="rounded" src="http://www.criptored.upm.es/crypt4you/temas/criptografiaclasica/imagenes/RompiendoRelaciones.png"
+          alt="">
+        </div>
+        <br>
+        <small class="text-muted">Fuente: http://www.criptored.upm.es/crypt4you/temas/criptografiaclasica/leccion9.html#apartado1-2</small>
+        </div>
+        <div class="container">
+          <br><br>
+          <h2 class="text-center">Leon Battista Alberti</h2>
+          <p class="text-left">(Génova, 1404 - Roma, 1472) Arquitecto, teórico del arte y escritor italiano. Alberti fue, con Leonardo da Vinci, una de las figuras más representativas del ideal del hombre del Renacimiento, ya que reunió en su persona todos los conocimientos y habilidades de la época: erudito, humanista, escritor, arquitecto, escultor, pintor, cortesano y hombre de mundo. 
+            <br><div class="text-center">
+              <img class="rounded" src="https://www.biografiasyvidas.com/biografia/a/fotos/alberti_leon.jpg"
+              alt="">
+            </div><br>
+            Hijo natural de un mercader florentino, se educó en Padua y Bolonia, antes de trasladarse a Roma en 1432 para desempeñar un cargo en la corte pontificia. Su contacto en Roma con los monumentos de la Antigüedad clásica dio pie a uno de sus primeros escritos: Descriptio urbis Romae (1434), primer estudio sistemático de la Roma antigua.
+
+Ese mismo año regresó a Florencia, donde trabó amistad con los grandes artistas del momento, de Brunelleschi a Donatello y Masaccio. A Brunelleschi dedicó precisamente su tratado Della pintura (1436), en el que se describen por primera vez las leyes de la perspectiva científica, además de dar una visión naturalista del arte de la pintura.
+
+En Florencia, Alberti trabajó como arquitecto para la familia Rucellai, con obras como el palacio Rucellai y el templete del Santo Sepulcro, que basan la belleza en la exactitud geométrica de las proporciones. En la primera de estas obras, Alberti combinó la geometría con la superposición de los órdenes clásicos, creando un modelo muy imitado de palacio renacentista. También se le debe la fachada de la iglesia gótica de Santa Maria Novella, en la que unió el característico taraceado de mármoles toscano a la sugestión de las figuras geométricas. 
+
+            <br><br>
+            En Roma, adonde se trasladó por deseo expreso del papa Nicolás V, redactó De re aedificatoria, un completo tratado de arquitectura en todos los aspectos teóricos y prácticos. Posteriormente se desplazó a Rímini, donde construyó el Templo Malatestiano, y a Mantua, donde se le deben las iglesias de San Sebastián y San Andrés.
+
+Estas obras, que constituyen la síntesis de sus criterios arquitectónicos, se convirtieron, junto con las de Brunelleschi, en los grandes modelos del arte constructivo renacentista. Leon Battista Alberti también escribió un tratado sobre la escultura (De statua) y algunas obras de perspectiva y matemáticas.
+          </p>
+          
+          <small class="text-muted">Fuente: https://www.biografiasyvidas.com/biografia/a/alberti_leon.htm</small>
+        </div><br><br>
+        <div class="container">
+          <h2 class="text-center">La máquina Enigma</h2>
+          <p class="text-left">Después de la primera guerra mundial, el inventor alemán Arthur Scherbius y su amigo Richard Ritter fundaron una empresa de ingeniería y crearon la máquina Enigma con la finalidad de venderla no solo al ejército sino también a muchas empresas del país. La máquina iba en una caja de dimensiones 34cm x 28cm x 15cm y pesaba unos 12 kg.
+            <br>
+            Básicamente, estaba formada por tres componentes conectadas por cables que combinados constituían una compleja máquina para cifrar: Un teclado para escribir cada letra del texto en claro; una unidad modificadora formada por tres rotores, un clavijero y un reflector; y un tablero donde quedaba iluminada la letra cifrada.
+            <br>
+            Cada rotor era un disco con dos caras y con 26 contactos eléctricos, uno por cada letra del alfabeto. El clavijero estaba colocado entre el teclado y el primer rotor,  con el objetivo de intercambiar 6 pares de letras. Mientras que el reflector conseguía que al codificar un mensaje cifrado, usando la mismas posiciones iniciales de los rotores y los mismos pares de letras interconectadas en el clavijero, se obtuviese el mensaje en claro.
+            <br><div class="text-center">
+              <img class="rounded" src="https://blogs.elpais.com/.a/6a00d8341bfb1653ef01901ced6876970b-120wi"
+              alt="">
+            </div><br>
+            Podemos imaginar el efecto de un rotor como el de una permutación en las posiciones de las letras del alfabeto, con la característica que cada vez que se codifica una letra, el rotor se desplaza una posición y, por tanto, la permutación sobre el alfabeto es distinta. Sin embargo, al codificar 26 veces una letra obtendríamos su codificación inicial.
+Enigma21
+Para evitar precisamente esa repetición, nunca deseada en criptografía, la máquina constaba de tres rotores, de manera que al codificar una letra saltaba una posición el rotor más rápido, el de más a la derecha. Una vez había dado una vuelta entera, empezaba a rotar el de en medio (para cada nuevo movimiento había que esperar los 26 movimientos del rotor rápido) hasta llegar al menos rápido que era el de la izquierda. 
+<br>
+En un principio Scherbius no tuvo el éxito que imaginaba vendiendo máquinas Enigma, sino más bien al contrario. Sin embargo, unos años más tarde, el ejército alemán se decidió a comprar la máquina Enigma a raíz de dos informes británicos publicados en 1923, sobre material criptográfico interceptado en la I guerra mundial: The World Crisis de Winston Churchill e Historia oficial de la I guerra mundial publicada por la Marina Real británica. 
+<br>
+En 1925 Scherbius se lanzó a fabricar máquinas Enigma en serie. El ejército alemán durante los  siguientes años compró más de 30000 máquinas Enigma y empezaron a enviar mensajes cifrados. Cada mes los operadores de Enigma recibían un nuevo libro de códigos con las claves que se debían usar cada día:
+<ul>
+  <li>Las posiciones del clavijero: A/D  C/G  M/P  R/S  T/F  L/U</li>
+  <li>La disposición u orden en que se colocaban los rotores: 2-1-3</li>
+  <li>Las posiciones iniciales de los rotores: S  M  E</li>
+</ul>
+El número total de claves de esta primera máquina Enigma era
+<br><div class="text-center">
+  <img class="rounded" src="https://blogs.elpais.com/.a/6a00d8341bfb1653ef0192aaabf029970d-320wi"
+  alt="">
+</div><br>
+          </p>
+        <small class="text-muted">Fuente: https://blogs.elpais.com/turing/2013/06/alan-turing-el-descifrado-de-la-maquina-enigma.html</small>  
+        </div>
       </div>
 
       <footer class="text-center text-lg-start bg-light text-muted">
